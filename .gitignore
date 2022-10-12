@@ -3,4 +3,8 @@
 /loadlib/
 /app/Listing/
 /app/cpy-bms/
+/.settings/
+/app/cbl/.settings
+.cobolBuild
+.cobolProj
 
