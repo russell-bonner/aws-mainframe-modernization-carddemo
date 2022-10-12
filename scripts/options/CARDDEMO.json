@@ -1,0 +1,23 @@
+{
+    "ip_address" : "127.0.0.1",
+    "region_name": "CARDDEMO",
+    "product": "ED",
+    "is64bit": true,
+    "regionPort": 5001,
+    "jesPort": 8001,
+    "region_location": "C:\\ES_Servers",
+    "extfh_vsam": true,
+    "mfdbfh_vsam": false,
+    "mfdbfh_config": "mfdbfh.cfg",
+    "configuration_files": 
+        {
+            "base_config": "base.json",
+            "update_config": "update.json",
+            "env_config": "env.json",
+            "alias_config": "alias.json",
+            "init_config": "init.json",
+            "data_dir_1": "datasets_pds",
+            "data_dir_2": "datasets_vsam",
+            "xa_config": "none"
+        }
+}

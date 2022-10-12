@@ -1,0 +1,6 @@
+*.cpython*
+/scripts/build.txt
+/loadlib/
+/app/Listing/
+/app/cpy-bms/
+

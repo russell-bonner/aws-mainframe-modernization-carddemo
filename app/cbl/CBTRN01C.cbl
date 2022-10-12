@@ -226,7 +226,7 @@
       *---------------------------------------------------------------*
        2000-LOOKUP-XREF.
            READ XREF-FILE  RECORD INTO CARD-XREF-RECORD
-           KEY IS XREF-CARD-NUM
+      *    KEY IS XREF-CARD-NUM
                 INVALID KEY
                   DISPLAY 'INVALID CARD NUMBER FOR XREF'
                   MOVE 4 TO WS-XREF-READ-STATUS
@@ -239,7 +239,7 @@
       *---------------------------------------------------------------*
        3000-READ-ACCOUNT.
            READ ACCOUNT-FILE RECORD INTO ACCOUNT-RECORD
-           KEY IS ACCT-ID
+      *    KEY IS ACCT-ID
                 INVALID KEY
                   DISPLAY 'INVALID ACCOUNT NUMBER FOUND'
                   MOVE 4 TO WS-ACCT-READ-STATUS

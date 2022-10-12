@@ -1,272 +1,266 @@
-      ******************************************************************
-      * Copyright Amazon.com, Inc. or its affiliates.                   
-      * All Rights Reserved.                                            
-      *                                                                 
-      * Licensed under the Apache License, Version 2.0 (the "License"). 
-      * You may not use this file except in compliance with the License.
-      * You may obtain a copy of the License at                         
-      *                                                                 
-      *    http://www.apache.org/licenses/LICENSE-2.0                   
-      *                                                                 
-      * Unless required by applicable law or agreed to in writing,      
-      * software distributed under the License is distributed on an     
-      * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,    
-      * either express or implied. See the License for the specific     
-      * language governing permissions and limitations under the License
-      ****************************************************************** 
-       01  COTRN2AI.
-           02  FILLER PIC X(12).
-           02  TRNNAMEL    COMP  PIC  S9(4).
-           02  TRNNAMEF    PICTURE X.
-           02  FILLER REDEFINES TRNNAMEF.
-             03 TRNNAMEA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TRNNAMEI  PIC X(4).
-           02  TITLE01L    COMP  PIC  S9(4).
-           02  TITLE01F    PICTURE X.
-           02  FILLER REDEFINES TITLE01F.
-             03 TITLE01A    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TITLE01I  PIC X(40).
-           02  CURDATEL    COMP  PIC  S9(4).
-           02  CURDATEF    PICTURE X.
-           02  FILLER REDEFINES CURDATEF.
-             03 CURDATEA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  CURDATEI  PIC X(8).
-           02  PGMNAMEL    COMP  PIC  S9(4).
-           02  PGMNAMEF    PICTURE X.
-           02  FILLER REDEFINES PGMNAMEF.
-             03 PGMNAMEA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  PGMNAMEI  PIC X(8).
-           02  TITLE02L    COMP  PIC  S9(4).
-           02  TITLE02F    PICTURE X.
-           02  FILLER REDEFINES TITLE02F.
-             03 TITLE02A    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TITLE02I  PIC X(40).
-           02  CURTIMEL    COMP  PIC  S9(4).
-           02  CURTIMEF    PICTURE X.
-           02  FILLER REDEFINES CURTIMEF.
-             03 CURTIMEA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  CURTIMEI  PIC X(8).
-           02  ACTIDINL    COMP  PIC  S9(4).
-           02  ACTIDINF    PICTURE X.
-           02  FILLER REDEFINES ACTIDINF.
-             03 ACTIDINA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  ACTIDINI  PIC X(11).
-           02  CARDNINL    COMP  PIC  S9(4).
-           02  CARDNINF    PICTURE X.
-           02  FILLER REDEFINES CARDNINF.
-             03 CARDNINA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  CARDNINI  PIC X(16).
-           02  TTYPCDL    COMP  PIC  S9(4).
-           02  TTYPCDF    PICTURE X.
-           02  FILLER REDEFINES TTYPCDF.
-             03 TTYPCDA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TTYPCDI  PIC X(2).
-           02  TCATCDL    COMP  PIC  S9(4).
-           02  TCATCDF    PICTURE X.
-           02  FILLER REDEFINES TCATCDF.
-             03 TCATCDA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TCATCDI  PIC X(4).
-           02  TRNSRCL    COMP  PIC  S9(4).
-           02  TRNSRCF    PICTURE X.
-           02  FILLER REDEFINES TRNSRCF.
-             03 TRNSRCA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TRNSRCI  PIC X(10).
-           02  TDESCL    COMP  PIC  S9(4).
-           02  TDESCF    PICTURE X.
-           02  FILLER REDEFINES TDESCF.
-             03 TDESCA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TDESCI  PIC X(60).
-           02  TRNAMTL    COMP  PIC  S9(4).
-           02  TRNAMTF    PICTURE X.
-           02  FILLER REDEFINES TRNAMTF.
-             03 TRNAMTA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TRNAMTI  PIC X(12).
-           02  TORIGDTL    COMP  PIC  S9(4).
-           02  TORIGDTF    PICTURE X.
-           02  FILLER REDEFINES TORIGDTF.
-             03 TORIGDTA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TORIGDTI  PIC X(10).
-           02  TPROCDTL    COMP  PIC  S9(4).
-           02  TPROCDTF    PICTURE X.
-           02  FILLER REDEFINES TPROCDTF.
-             03 TPROCDTA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  TPROCDTI  PIC X(10).
-           02  MIDL    COMP  PIC  S9(4).
-           02  MIDF    PICTURE X.
-           02  FILLER REDEFINES MIDF.
-             03 MIDA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  MIDI  PIC X(9).
-           02  MNAMEL    COMP  PIC  S9(4).
-           02  MNAMEF    PICTURE X.
-           02  FILLER REDEFINES MNAMEF.
-             03 MNAMEA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  MNAMEI  PIC X(30).
-           02  MCITYL    COMP  PIC  S9(4).
-           02  MCITYF    PICTURE X.
-           02  FILLER REDEFINES MCITYF.
-             03 MCITYA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  MCITYI  PIC X(25).
-           02  MZIPL    COMP  PIC  S9(4).
-           02  MZIPF    PICTURE X.
-           02  FILLER REDEFINES MZIPF.
-             03 MZIPA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  MZIPI  PIC X(10).
-           02  CONFIRML    COMP  PIC  S9(4).
-           02  CONFIRMF    PICTURE X.
-           02  FILLER REDEFINES CONFIRMF.
-             03 CONFIRMA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  CONFIRMI  PIC X(1).
-           02  ERRMSGL    COMP  PIC  S9(4).
-           02  ERRMSGF    PICTURE X.
-           02  FILLER REDEFINES ERRMSGF.
-             03 ERRMSGA    PICTURE X.
-           02  FILLER   PICTURE X(4).
-           02  ERRMSGI  PIC X(78).
-       01  COTRN2AO REDEFINES COTRN2AI.
-           02  FILLER PIC X(12).
-           02  FILLER PICTURE X(3).
-           02  TRNNAMEC    PICTURE X.
-           02  TRNNAMEP    PICTURE X.
-           02  TRNNAMEH    PICTURE X.
-           02  TRNNAMEV    PICTURE X.
-           02  TRNNAMEO  PIC X(4).
-           02  FILLER PICTURE X(3).
-           02  TITLE01C    PICTURE X.
-           02  TITLE01P    PICTURE X.
-           02  TITLE01H    PICTURE X.
-           02  TITLE01V    PICTURE X.
-           02  TITLE01O  PIC X(40).
-           02  FILLER PICTURE X(3).
-           02  CURDATEC    PICTURE X.
-           02  CURDATEP    PICTURE X.
-           02  CURDATEH    PICTURE X.
-           02  CURDATEV    PICTURE X.
-           02  CURDATEO  PIC X(8).
-           02  FILLER PICTURE X(3).
-           02  PGMNAMEC    PICTURE X.
-           02  PGMNAMEP    PICTURE X.
-           02  PGMNAMEH    PICTURE X.
-           02  PGMNAMEV    PICTURE X.
-           02  PGMNAMEO  PIC X(8).
-           02  FILLER PICTURE X(3).
-           02  TITLE02C    PICTURE X.
-           02  TITLE02P    PICTURE X.
-           02  TITLE02H    PICTURE X.
-           02  TITLE02V    PICTURE X.
-           02  TITLE02O  PIC X(40).
-           02  FILLER PICTURE X(3).
-           02  CURTIMEC    PICTURE X.
-           02  CURTIMEP    PICTURE X.
-           02  CURTIMEH    PICTURE X.
-           02  CURTIMEV    PICTURE X.
-           02  CURTIMEO  PIC X(8).
-           02  FILLER PICTURE X(3).
-           02  ACTIDINC    PICTURE X.
-           02  ACTIDINP    PICTURE X.
-           02  ACTIDINH    PICTURE X.
-           02  ACTIDINV    PICTURE X.
-           02  ACTIDINO  PIC X(11).
-           02  FILLER PICTURE X(3).
-           02  CARDNINC    PICTURE X.
-           02  CARDNINP    PICTURE X.
-           02  CARDNINH    PICTURE X.
-           02  CARDNINV    PICTURE X.
-           02  CARDNINO  PIC X(16).
-           02  FILLER PICTURE X(3).
-           02  TTYPCDC    PICTURE X.
-           02  TTYPCDP    PICTURE X.
-           02  TTYPCDH    PICTURE X.
-           02  TTYPCDV    PICTURE X.
-           02  TTYPCDO  PIC X(2).
-           02  FILLER PICTURE X(3).
-           02  TCATCDC    PICTURE X.
-           02  TCATCDP    PICTURE X.
-           02  TCATCDH    PICTURE X.
-           02  TCATCDV    PICTURE X.
-           02  TCATCDO  PIC X(4).
-           02  FILLER PICTURE X(3).
-           02  TRNSRCC    PICTURE X.
-           02  TRNSRCP    PICTURE X.
-           02  TRNSRCH    PICTURE X.
-           02  TRNSRCV    PICTURE X.
-           02  TRNSRCO  PIC X(10).
-           02  FILLER PICTURE X(3).
-           02  TDESCC    PICTURE X.
-           02  TDESCP    PICTURE X.
-           02  TDESCH    PICTURE X.
-           02  TDESCV    PICTURE X.
-           02  TDESCO  PIC X(60).
-           02  FILLER PICTURE X(3).
-           02  TRNAMTC    PICTURE X.
-           02  TRNAMTP    PICTURE X.
-           02  TRNAMTH    PICTURE X.
-           02  TRNAMTV    PICTURE X.
-           02  TRNAMTO  PIC X(12).
-           02  FILLER PICTURE X(3).
-           02  TORIGDTC    PICTURE X.
-           02  TORIGDTP    PICTURE X.
-           02  TORIGDTH    PICTURE X.
-           02  TORIGDTV    PICTURE X.
-           02  TORIGDTO  PIC X(10).
-           02  FILLER PICTURE X(3).
-           02  TPROCDTC    PICTURE X.
-           02  TPROCDTP    PICTURE X.
-           02  TPROCDTH    PICTURE X.
-           02  TPROCDTV    PICTURE X.
-           02  TPROCDTO  PIC X(10).
-           02  FILLER PICTURE X(3).
-           02  MIDC    PICTURE X.
-           02  MIDP    PICTURE X.
-           02  MIDH    PICTURE X.
-           02  MIDV    PICTURE X.
-           02  MIDO  PIC X(9).
-           02  FILLER PICTURE X(3).
-           02  MNAMEC    PICTURE X.
-           02  MNAMEP    PICTURE X.
-           02  MNAMEH    PICTURE X.
-           02  MNAMEV    PICTURE X.
-           02  MNAMEO  PIC X(30).
-           02  FILLER PICTURE X(3).
-           02  MCITYC    PICTURE X.
-           02  MCITYP    PICTURE X.
-           02  MCITYH    PICTURE X.
-           02  MCITYV    PICTURE X.
-           02  MCITYO  PIC X(25).
-           02  FILLER PICTURE X(3).
-           02  MZIPC    PICTURE X.
-           02  MZIPP    PICTURE X.
-           02  MZIPH    PICTURE X.
-           02  MZIPV    PICTURE X.
-           02  MZIPO  PIC X(10).
-           02  FILLER PICTURE X(3).
-           02  CONFIRMC    PICTURE X.
-           02  CONFIRMP    PICTURE X.
-           02  CONFIRMH    PICTURE X.
-           02  CONFIRMV    PICTURE X.
-           02  CONFIRMO  PIC X(1).
-           02  FILLER PICTURE X(3).
-           02  ERRMSGC    PICTURE X.
-           02  ERRMSGP    PICTURE X.
-           02  ERRMSGH    PICTURE X.
-           02  ERRMSGV    PICTURE X.
-           02  ERRMSGO  PIC X(78).
+      *   Micro Focus COBOL 2017  8.0.00189
+      *   Micro Focus BMS Screen Painter
+      *   MapSet Name   COTRN02
+      *   Date Created  10/12/2022
+      *   Time Created  14:25:49
+
+      *  Input Data For Map COTRN2A
+         01 COTRN2AI.
+            03 FILLER                         PIC X(12).
+            03 TRNNAMEL                       PIC S9(4) COMP.
+            03 TRNNAMEF                       PIC X.
+            03 FILLER REDEFINES TRNNAMEF.
+               05 TRNNAMEA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 TRNNAMEI                       PIC X(4).
+            03 TITLE01L                       PIC S9(4) COMP.
+            03 TITLE01F                       PIC X.
+            03 FILLER REDEFINES TITLE01F.
+               05 TITLE01A                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 TITLE01I                       PIC X(40).
+            03 CURDATEL                       PIC S9(4) COMP.
+            03 CURDATEF                       PIC X.
+            03 FILLER REDEFINES CURDATEF.
+               05 CURDATEA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 CURDATEI                       PIC X(8).
+            03 PGMNAMEL                       PIC S9(4) COMP.
+            03 PGMNAMEF                       PIC X.
+            03 FILLER REDEFINES PGMNAMEF.
+               05 PGMNAMEA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 PGMNAMEI                       PIC X(8).
+            03 TITLE02L                       PIC S9(4) COMP.
+            03 TITLE02F                       PIC X.
+            03 FILLER REDEFINES TITLE02F.
+               05 TITLE02A                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 TITLE02I                       PIC X(40).
+            03 CURTIMEL                       PIC S9(4) COMP.
+            03 CURTIMEF                       PIC X.
+            03 FILLER REDEFINES CURTIMEF.
+               05 CURTIMEA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 CURTIMEI                       PIC X(8).
+            03 ACTIDINL                       PIC S9(4) COMP.
+            03 ACTIDINF                       PIC X.
+            03 FILLER REDEFINES ACTIDINF.
+               05 ACTIDINA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 ACTIDINI                       PIC X(11).
+            03 CARDNINL                       PIC S9(4) COMP.
+            03 CARDNINF                       PIC X.
+            03 FILLER REDEFINES CARDNINF.
+               05 CARDNINA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 CARDNINI                       PIC X(16).
+            03 TTYPCDL                        PIC S9(4) COMP.
+            03 TTYPCDF                        PIC X.
+            03 FILLER REDEFINES TTYPCDF.
+               05 TTYPCDA                        PIC X.
+            03 FILLER                         PIC X(4).
+            03 TTYPCDI                        PIC X(2).
+            03 TCATCDL                        PIC S9(4) COMP.
+            03 TCATCDF                        PIC X.
+            03 FILLER REDEFINES TCATCDF.
+               05 TCATCDA                        PIC X.
+            03 FILLER                         PIC X(4).
+            03 TCATCDI                        PIC X(4).
+            03 TRNSRCL                        PIC S9(4) COMP.
+            03 TRNSRCF                        PIC X.
+            03 FILLER REDEFINES TRNSRCF.
+               05 TRNSRCA                        PIC X.
+            03 FILLER                         PIC X(4).
+            03 TRNSRCI                        PIC X(10).
+            03 TDESCL                         PIC S9(4) COMP.
+            03 TDESCF                         PIC X.
+            03 FILLER REDEFINES TDESCF.
+               05 TDESCA                         PIC X.
+            03 FILLER                         PIC X(4).
+            03 TDESCI                         PIC X(60).
+            03 TRNAMTL                        PIC S9(4) COMP.
+            03 TRNAMTF                        PIC X.
+            03 FILLER REDEFINES TRNAMTF.
+               05 TRNAMTA                        PIC X.
+            03 FILLER                         PIC X(4).
+            03 TRNAMTI                        PIC X(12).
+            03 TORIGDTL                       PIC S9(4) COMP.
+            03 TORIGDTF                       PIC X.
+            03 FILLER REDEFINES TORIGDTF.
+               05 TORIGDTA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 TORIGDTI                       PIC X(10).
+            03 TPROCDTL                       PIC S9(4) COMP.
+            03 TPROCDTF                       PIC X.
+            03 FILLER REDEFINES TPROCDTF.
+               05 TPROCDTA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 TPROCDTI                       PIC X(10).
+            03 MIDL                           PIC S9(4) COMP.
+            03 MIDF                           PIC X.
+            03 FILLER REDEFINES MIDF.
+               05 MIDA                           PIC X.
+            03 FILLER                         PIC X(4).
+            03 MIDI                           PIC X(9).
+            03 MNAMEL                         PIC S9(4) COMP.
+            03 MNAMEF                         PIC X.
+            03 FILLER REDEFINES MNAMEF.
+               05 MNAMEA                         PIC X.
+            03 FILLER                         PIC X(4).
+            03 MNAMEI                         PIC X(30).
+            03 MCITYL                         PIC S9(4) COMP.
+            03 MCITYF                         PIC X.
+            03 FILLER REDEFINES MCITYF.
+               05 MCITYA                         PIC X.
+            03 FILLER                         PIC X(4).
+            03 MCITYI                         PIC X(25).
+            03 MZIPL                          PIC S9(4) COMP.
+            03 MZIPF                          PIC X.
+            03 FILLER REDEFINES MZIPF.
+               05 MZIPA                          PIC X.
+            03 FILLER                         PIC X(4).
+            03 MZIPI                          PIC X(10).
+            03 CONFIRML                       PIC S9(4) COMP.
+            03 CONFIRMF                       PIC X.
+            03 FILLER REDEFINES CONFIRMF.
+               05 CONFIRMA                       PIC X.
+            03 FILLER                         PIC X(4).
+            03 CONFIRMI                       PIC X(1).
+            03 ERRMSGL                        PIC S9(4) COMP.
+            03 ERRMSGF                        PIC X.
+            03 FILLER REDEFINES ERRMSGF.
+               05 ERRMSGA                        PIC X.
+            03 FILLER                         PIC X(4).
+            03 ERRMSGI                        PIC X(78).
+
+      *  Output Data For Map COTRN2A
+         01 COTRN2AO REDEFINES COTRN2AI.
+            03 FILLER                         PIC X(12).
+            03 FILLER                         PIC X(3).
+            03 TRNNAMEC                       PIC X.
+            03 TRNNAMEP                       PIC X.
+            03 TRNNAMEH                       PIC X.
+            03 TRNNAMEV                       PIC X.
+            03 TRNNAMEO                       PIC X(4).
+            03 FILLER                         PIC X(3).
+            03 TITLE01C                       PIC X.
+            03 TITLE01P                       PIC X.
+            03 TITLE01H                       PIC X.
+            03 TITLE01V                       PIC X.
+            03 TITLE01O                       PIC X(40).
+            03 FILLER                         PIC X(3).
+            03 CURDATEC                       PIC X.
+            03 CURDATEP                       PIC X.
+            03 CURDATEH                       PIC X.
+            03 CURDATEV                       PIC X.
+            03 CURDATEO                       PIC X(8).
+            03 FILLER                         PIC X(3).
+            03 PGMNAMEC                       PIC X.
+            03 PGMNAMEP                       PIC X.
+            03 PGMNAMEH                       PIC X.
+            03 PGMNAMEV                       PIC X.
+            03 PGMNAMEO                       PIC X(8).
+            03 FILLER                         PIC X(3).
+            03 TITLE02C                       PIC X.
+            03 TITLE02P                       PIC X.
+            03 TITLE02H                       PIC X.
+            03 TITLE02V                       PIC X.
+            03 TITLE02O                       PIC X(40).
+            03 FILLER                         PIC X(3).
+            03 CURTIMEC                       PIC X.
+            03 CURTIMEP                       PIC X.
+            03 CURTIMEH                       PIC X.
+            03 CURTIMEV                       PIC X.
+            03 CURTIMEO                       PIC X(8).
+            03 FILLER                         PIC X(3).
+            03 ACTIDINC                       PIC X.
+            03 ACTIDINP                       PIC X.
+            03 ACTIDINH                       PIC X.
+            03 ACTIDINV                       PIC X.
+            03 ACTIDINO                       PIC X(11).
+            03 FILLER                         PIC X(3).
+            03 CARDNINC                       PIC X.
+            03 CARDNINP                       PIC X.
+            03 CARDNINH                       PIC X.
+            03 CARDNINV                       PIC X.
+            03 CARDNINO                       PIC X(16).
+            03 FILLER                         PIC X(3).
+            03 TTYPCDC                        PIC X.
+            03 TTYPCDP                        PIC X.
+            03 TTYPCDH                        PIC X.
+            03 TTYPCDV                        PIC X.
+            03 TTYPCDO                        PIC X(2).
+            03 FILLER                         PIC X(3).
+            03 TCATCDC                        PIC X.
+            03 TCATCDP                        PIC X.
+            03 TCATCDH                        PIC X.
+            03 TCATCDV                        PIC X.
+            03 TCATCDO                        PIC X(4).
+            03 FILLER                         PIC X(3).
+            03 TRNSRCC                        PIC X.
+            03 TRNSRCP                        PIC X.
+            03 TRNSRCH                        PIC X.
+            03 TRNSRCV                        PIC X.
+            03 TRNSRCO                        PIC X(10).
+            03 FILLER                         PIC X(3).
+            03 TDESCC                         PIC X.
+            03 TDESCP                         PIC X.
+            03 TDESCH                         PIC X.
+            03 TDESCV                         PIC X.
+            03 TDESCO                         PIC X(60).
+            03 FILLER                         PIC X(3).
+            03 TRNAMTC                        PIC X.
+            03 TRNAMTP                        PIC X.
+            03 TRNAMTH                        PIC X.
+            03 TRNAMTV                        PIC X.
+            03 TRNAMTO                        PIC X(12).
+            03 FILLER                         PIC X(3).
+            03 TORIGDTC                       PIC X.
+            03 TORIGDTP                       PIC X.
+            03 TORIGDTH                       PIC X.
+            03 TORIGDTV                       PIC X.
+            03 TORIGDTO                       PIC X(10).
+            03 FILLER                         PIC X(3).
+            03 TPROCDTC                       PIC X.
+            03 TPROCDTP                       PIC X.
+            03 TPROCDTH                       PIC X.
+            03 TPROCDTV                       PIC X.
+            03 TPROCDTO                       PIC X(10).
+            03 FILLER                         PIC X(3).
+            03 MIDC                           PIC X.
+            03 MIDP                           PIC X.
+            03 MIDH                           PIC X.
+            03 MIDV                           PIC X.
+            03 MIDO                           PIC X(9).
+            03 FILLER                         PIC X(3).
+            03 MNAMEC                         PIC X.
+            03 MNAMEP                         PIC X.
+            03 MNAMEH                         PIC X.
+            03 MNAMEV                         PIC X.
+            03 MNAMEO                         PIC X(30).
+            03 FILLER                         PIC X(3).
+            03 MCITYC                         PIC X.
+            03 MCITYP                         PIC X.
+            03 MCITYH                         PIC X.
+            03 MCITYV                         PIC X.
+            03 MCITYO                         PIC X(25).
+            03 FILLER                         PIC X(3).
+            03 MZIPC                          PIC X.
+            03 MZIPP                          PIC X.
+            03 MZIPH                          PIC X.
+            03 MZIPV                          PIC X.
+            03 MZIPO                          PIC X(10).
+            03 FILLER                         PIC X(3).
+            03 CONFIRMC                       PIC X.
+            03 CONFIRMP                       PIC X.
+            03 CONFIRMH                       PIC X.
+            03 CONFIRMV                       PIC X.
+            03 CONFIRMO                       PIC X(1).
+            03 FILLER                         PIC X(3).
+            03 ERRMSGC                        PIC X.
+            03 ERRMSGP                        PIC X.
+            03 ERRMSGH                        PIC X.
+            03 ERRMSGV                        PIC X.
+            03 ERRMSGO                        PIC X(78).
+
